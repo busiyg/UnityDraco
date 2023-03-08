@@ -1,0 +1,6 @@
+*.csproj
+DracoTest.sln
+Library/
+obj/
+Logs/
+.vs/
