@@ -1,0 +1,14 @@
+﻿  1>Building Custom Rule C:/Users/busiy/Downloads/draco-master/draco-master/CMakeLists.txt
+  bit_utils.cc
+  bounding_box.cc
+  cycle_timer.cc
+  data_buffer.cc
+  decoder_buffer.cc
+  divide.cc
+  draco_types.cc
+  encoder_buffer.cc
+  hash_utils.cc
+  options.cc
+  quantization_utils.cc
+  正在生成代码...
+  draco_core.vcxproj -> C:\Users\busiy\Desktop\cmakebuild\draco_core.dir\Debug\draco_core.lib

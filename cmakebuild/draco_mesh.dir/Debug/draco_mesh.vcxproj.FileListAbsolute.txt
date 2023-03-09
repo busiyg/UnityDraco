@@ -1,0 +1,1 @@
+C:\Users\busiy\Desktop\cmakebuild\draco_mesh.dir\Debug\draco_mesh.lib

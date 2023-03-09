@@ -1,0 +1,6 @@
+﻿  1>Building Custom Rule C:/Users/busiy/Downloads/draco-master/draco-master/CMakeLists.txt
+  shannon_entropy.cc
+  symbol_decoding.cc
+  symbol_encoding.cc
+  正在生成代码...
+  draco_compression_entropy.vcxproj -> C:\Users\busiy\Desktop\cmakebuild\draco_compression_entropy.dir\Debug\draco_compression_entropy.lib

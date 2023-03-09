@@ -1,0 +1,1 @@
+C:\Users\busiy\Desktop\cmakebuild\draco_core.dir\Debug\draco_core.lib

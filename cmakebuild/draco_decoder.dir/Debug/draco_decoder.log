@@ -1,0 +1,21 @@
+﻿  1>Building Custom Rule C:/Users/busiy/Downloads/draco-master/draco-master/CMakeLists.txt
+  draco_decoder.cc
+  file_reader_factory.cc
+  file_utils.cc
+  file_writer_factory.cc
+  file_writer_utils.cc
+C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\io\file_writer_utils.cc(41,28): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+  mesh_io.cc
+  obj_decoder.cc
+  obj_encoder.cc
+  parser_utils.cc
+  ply_decoder.cc
+  ply_encoder.cc
+  ply_reader.cc
+  stl_decoder.cc
+  stl_encoder.cc
+  point_cloud_io.cc
+  stdio_file_reader.cc
+  stdio_file_writer.cc
+  正在生成代码...
+  draco_decoder.vcxproj -> C:\Users\busiy\Desktop\cmakebuild\Debug\draco_decoder.exe

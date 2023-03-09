@@ -1,0 +1,1 @@
+C:\Users\busiy\Desktop\cmakebuild\draco_metadata_enc.dir\Debug\draco_metadata_enc.lib

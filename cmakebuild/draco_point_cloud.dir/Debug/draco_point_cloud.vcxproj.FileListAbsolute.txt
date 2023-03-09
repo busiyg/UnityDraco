@@ -1,0 +1,1 @@
+C:\Users\busiy\Desktop\cmakebuild\draco_point_cloud.dir\Debug\draco_point_cloud.lib

@@ -1,0 +1,10 @@
+^C:\USERS\BUSIY\DESKTOP\CMAKEBUILD\CMAKEFILES\6D98D872257572D60B55FE2B1B20E5A0\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/busiy/Downloads/draco-master/draco-master -BC:/Users/busiy/Desktop/cmakebuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/busiy/Desktop/cmakebuild/draco.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

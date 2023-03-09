@@ -1,0 +1,10 @@
+^C:\USERS\BUSIY\DOWNLOADS\DRACO-MASTER\DRACO-MASTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/busiy/Downloads/draco-master/draco-master -BC:/Users/busiy/Desktop/cmakebuild --check-stamp-file C:/Users/busiy/Desktop/cmakebuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

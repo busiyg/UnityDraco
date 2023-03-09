@@ -1,0 +1,5 @@
+﻿  1>Building Custom Rule C:/Users/busiy/Downloads/draco-master/draco-master/CMakeLists.txt
+  dynamic_integer_points_kd_tree_decoder.cc
+  float_points_tree_decoder.cc
+  正在生成代码...
+  draco_points_dec.vcxproj -> C:\Users\busiy\Desktop\cmakebuild\draco_points_dec.dir\Debug\draco_points_dec.lib

@@ -1,0 +1,1 @@
+C:\Users\busiy\Desktop\cmakebuild\draco_compression_point_cloud_enc.dir\Debug\draco_compression_point_cloud_enc.lib

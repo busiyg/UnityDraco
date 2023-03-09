@@ -1,0 +1,5 @@
+﻿  1>Building Custom Rule C:/Users/busiy/Downloads/draco-master/draco-master/CMakeLists.txt
+  point_cloud.cc
+  point_cloud_builder.cc
+  正在生成代码...
+  draco_point_cloud.vcxproj -> C:\Users\busiy\Desktop\cmakebuild\draco_point_cloud.dir\Debug\draco_point_cloud.lib

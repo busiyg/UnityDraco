@@ -1,0 +1,12 @@
+﻿  1>Building Custom Rule C:/Users/busiy/Downloads/draco-master/draco-master/CMakeLists.txt
+  corner_table.cc
+  mesh.cc
+  mesh_are_equivalent.cc
+  mesh_attribute_corner_table.cc
+  mesh_cleanup.cc
+  mesh_features.cc
+  mesh_misc_functions.cc
+  mesh_stripifier.cc
+  triangle_soup_mesh_builder.cc
+  正在生成代码...
+  draco_mesh.vcxproj -> C:\Users\busiy\Desktop\cmakebuild\draco_mesh.dir\Debug\draco_mesh.lib

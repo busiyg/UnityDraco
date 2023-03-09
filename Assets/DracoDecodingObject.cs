@@ -45,7 +45,7 @@ public class DracoDecodingObject : MonoBehaviour {
     public void  updateMesh(Mesh  mesh) {
         List<Mesh> m = new List<Mesh>();
         DracoMeshLoader dracoLoader = new DracoMeshLoader();
-        int numFaces = dracoLoader.LoadMeshFromAsset("bunny.drc",ref m);
+        int numFaces = dracoLoader.LoadMeshFromAsset("test.obj.drc", ref m);
         GetComponent<MeshFilter>().mesh = m[0];
     }
 }

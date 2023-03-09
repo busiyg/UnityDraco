@@ -1,0 +1,7 @@
+﻿  1>Building Custom Rule C:/Users/busiy/Downloads/draco-master/draco-master/CMakeLists.txt
+  geometry_metadata.cc
+  metadata.cc
+  property_table.cc
+  structural_metadata.cc
+  正在生成代码...
+  draco_metadata.vcxproj -> C:\Users\busiy\Desktop\cmakebuild\draco_metadata.dir\Debug\draco_metadata.lib

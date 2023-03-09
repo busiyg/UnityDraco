@@ -1,0 +1,11 @@
+﻿  1>Building Custom Rule C:/Users/busiy/Downloads/draco-master/draco-master/CMakeLists.txt
+  adaptive_rans_bit_decoder.cc
+  adaptive_rans_bit_encoder.cc
+  direct_bit_decoder.cc
+  direct_bit_encoder.cc
+  rans_bit_decoder.cc
+  rans_bit_encoder.cc
+  symbol_bit_decoder.cc
+  symbol_bit_encoder.cc
+  正在生成代码...
+  draco_compression_bit_coders.vcxproj -> C:\Users\busiy\Desktop\cmakebuild\draco_compression_bit_coders.dir\Debug\draco_compression_bit_coders.lib

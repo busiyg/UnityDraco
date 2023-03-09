@@ -1,0 +1,1 @@
+C:\Users\busiy\Desktop\cmakebuild\draco_compression_attributes_pred_schemes_enc.dir\Debug\draco_compression_attributes_pred_schemes_enc.lib

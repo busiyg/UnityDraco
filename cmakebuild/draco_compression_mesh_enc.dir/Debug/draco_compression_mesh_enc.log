@@ -1,0 +1,7 @@
+﻿  1>Building Custom Rule C:/Users/busiy/Downloads/draco-master/draco-master/CMakeLists.txt
+  mesh_edgebreaker_encoder.cc
+  mesh_edgebreaker_encoder_impl.cc
+  mesh_encoder.cc
+  mesh_sequential_encoder.cc
+  正在生成代码...
+  draco_compression_mesh_enc.vcxproj -> C:\Users\busiy\Desktop\cmakebuild\draco_compression_mesh_enc.dir\Debug\draco_compression_mesh_enc.lib

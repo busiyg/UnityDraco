@@ -1,0 +1,1 @@
+C:\Users\busiy\Desktop\cmakebuild\draco_compression_bit_coders.dir\Debug\draco_compression_bit_coders.lib

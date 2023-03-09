@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\bit_utils.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\bounding_box.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\cycle_timer.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\data_buffer.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\decoder_buffer.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\divide.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\draco_types.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\encoder_buffer.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\hash_utils.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\options.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\quantization_utils.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\bit_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\bounding_box.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\cycle_timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\data_buffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\decoder_buffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\divide.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\draco_index_type.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\draco_index_type_vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\draco_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\draco_version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\encoder_buffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\hash_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\macros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\math_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\options.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\quantization_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\status.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\status_or.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\varint_decoding.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\varint_encoding.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\busiy\Downloads\draco-master\draco-master\src\draco\core\vector_d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\busiy\Downloads\draco-master\draco-master\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{7B7502B6-ADA9-3DE0-88BC-C4B61D451D61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F15B9D4B-0102-3932-B2B0-58E4DA9A4FD1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

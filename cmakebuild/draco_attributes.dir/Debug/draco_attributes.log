@@ -1,0 +1,9 @@
+﻿  1>Building Custom Rule C:/Users/busiy/Downloads/draco-master/draco-master/CMakeLists.txt
+  attribute_octahedron_transform.cc
+C:\Users\busiy\Downloads\draco-master\draco-master\src\draco/compression/attributes/normal_compression_utils.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  attribute_quantization_transform.cc
+  attribute_transform.cc
+  geometry_attribute.cc
+  point_attribute.cc
+  正在生成代码...
+  draco_attributes.vcxproj -> C:\Users\busiy\Desktop\cmakebuild\draco_attributes.dir\Debug\draco_attributes.lib

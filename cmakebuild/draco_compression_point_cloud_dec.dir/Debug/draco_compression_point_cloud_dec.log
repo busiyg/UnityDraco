@@ -1,0 +1,6 @@
+﻿  1>Building Custom Rule C:/Users/busiy/Downloads/draco-master/draco-master/CMakeLists.txt
+  point_cloud_decoder.cc
+  point_cloud_kd_tree_decoder.cc
+  point_cloud_sequential_decoder.cc
+  正在生成代码...
+  draco_compression_point_cloud_dec.vcxproj -> C:\Users\busiy\Desktop\cmakebuild\draco_compression_point_cloud_dec.dir\Debug\draco_compression_point_cloud_dec.lib

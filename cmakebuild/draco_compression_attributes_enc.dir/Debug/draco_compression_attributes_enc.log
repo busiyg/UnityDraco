@@ -1,0 +1,15 @@
+﻿  1>Building Custom Rule C:/Users/busiy/Downloads/draco-master/draco-master/CMakeLists.txt
+  attributes_encoder.cc
+  kd_tree_attributes_encoder.cc
+  sequential_attribute_encoder.cc
+  sequential_attribute_encoders_controller.cc
+C:\Users\busiy\Downloads\draco-master\draco-master\src\draco/compression/attributes/sequential_normal_attribute_encoder.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\busiy\Downloads\draco-master\draco-master\src\draco/compression/attributes/normal_compression_utils.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  sequential_integer_attribute_encoder.cc
+C:\Users\busiy\Downloads\draco-master\draco-master\src\draco/compression/attributes/normal_compression_utils.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  sequential_normal_attribute_encoder.cc
+C:\Users\busiy\Downloads\draco-master\draco-master\src\draco/compression/attributes/sequential_normal_attribute_encoder.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\busiy\Downloads\draco-master\draco-master\src\draco/compression/attributes/normal_compression_utils.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  sequential_quantization_attribute_encoder.cc
+  正在生成代码...
+  draco_compression_attributes_enc.vcxproj -> C:\Users\busiy\Desktop\cmakebuild\draco_compression_attributes_enc.dir\Debug\draco_compression_attributes_enc.lib

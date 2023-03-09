@@ -1,0 +1,1 @@
+C:\Users\busiy\Desktop\cmakebuild\draco_compression_attributes_enc.dir\Debug\draco_compression_attributes_enc.lib
