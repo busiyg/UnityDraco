@@ -21,6 +21,8 @@ using UnityEngine;
 
 public unsafe class DracoMeshLoader
 {
+    public List<DracoMesh> dracoMeshList;
+
   // These values must be exactly the same as the values in draco_types.h.
   // Attribute data type.
   enum DataType {
@@ -119,33 +121,33 @@ public unsafe class DracoMeshLoader
   [DllImport ("dracodec_unity")] private static extern bool GetAttributeData(
       DracoMesh* mesh, DracoAttribute* attr, DracoData**data);
 
-  public int LoadMeshFromAsset(string assetName, ref List<Mesh> meshes)
+  public Mesh LoadMeshFromAsset(string assetName)
   {
     TextAsset asset =
         Resources.Load(assetName, typeof(TextAsset)) as TextAsset;
     if (asset == null) {
       Debug.Log ("Didn't load file!");
-      return -1;
+      return null;
     }
     byte[] encodedData = asset.bytes;
     Debug.Log(encodedData.Length.ToString());
     if (encodedData.Length == 0) {
       Debug.Log ("Didn't load encoded data!");
-      return -1;
+      return null;
     }
-    return ConvertDracoMeshToUnity(encodedData, ref meshes);
+    return ConvertDracoMeshToUnity(encodedData);
   }
 
   // Decodes a Draco mesh, creates a Unity mesh from the decoded data and
   // adds the Unity mesh to meshes. encodedData is the compressed Draco mesh.
-  public unsafe int ConvertDracoMeshToUnity(byte[] encodedData,
-                                            ref List<Mesh> meshes)
+  public unsafe Mesh ConvertDracoMeshToUnity(byte[] encodedData)
   {
     float startTime = Time.realtimeSinceStartup;
     DracoMesh *mesh = null;
+ 
     if (DecodeDracoMesh(encodedData, encodedData.Length, &mesh) <= 0) {
       Debug.Log("Failed: Decoding error.");
-      return -1;
+      return null;
     }
 
     float decodeTimeMilli =
@@ -155,15 +157,14 @@ public unsafe class DracoMeshLoader
     Debug.Log("Num indices: " + mesh->numFaces.ToString());
     Debug.Log("Num vertices: " + mesh->numVertices.ToString());
     Debug.Log("Num attributes: " + mesh->numAttributes.ToString());
-
-    Mesh unityMesh = CreateUnityMesh(mesh);
+        Mesh unityMesh = CreateUnityMesh(mesh);
     UnityMeshToCamera(ref unityMesh);
-    meshes.Add(unityMesh);
-
     int numFaces = mesh->numFaces;
     ReleaseDracoMesh(&mesh);
-    return numFaces;
+    return unityMesh;
   }
+
+    private Mesh tempMesh;
 
   // Creates a Unity mesh from the decoded Draco mesh.
   public unsafe Mesh CreateUnityMesh(DracoMesh *dracoMesh)
@@ -276,10 +277,16 @@ public unsafe class DracoMeshLoader
               copyDecodedDataTimeMilli.ToString());
 
     startTime = Time.realtimeSinceStartup;
-    Mesh mesh = new Mesh();
+
+        if (this.tempMesh == null)
+        {
+            this.tempMesh = new Mesh();
+        }
+
+       // Mesh tempMesh = new Mesh();
 
 #if UNITY_2017_3_OR_NEWER
-    mesh.indexFormat = (newVertices.Length > System.UInt16.MaxValue)
+    tempMesh.indexFormat = (newVertices.Length > System.UInt16.MaxValue)
         ? UnityEngine.Rendering.IndexFormat.UInt32
         : UnityEngine.Rendering.IndexFormat.UInt16;
 #else
@@ -288,25 +295,28 @@ public unsafe class DracoMeshLoader
     }
 #endif
 
-    mesh.vertices = newVertices;
-    mesh.SetTriangles(newTriangles, 0, true);
+
+      
+
+    tempMesh.vertices = newVertices;
+    tempMesh.SetTriangles(newTriangles, 0, true);
     if (newUVs != null) {
-      mesh.uv = newUVs;
+      tempMesh.uv = newUVs;
     }
     if (newNormals != null) {
-      mesh.normals = newNormals;
+      tempMesh.normals = newNormals;
     } else {
-      mesh.RecalculateNormals();
+      tempMesh.RecalculateNormals();
       Debug.Log("Mesh doesn't have normals, recomputed.");
     }
     if (newColors != null) {
-      mesh.colors = newColors;
+      tempMesh.colors = newColors;
     }
 
     float convertTimeMilli =
         (Time.realtimeSinceStartup - startTime) * 1000.0f;
     Debug.Log("convertTimeMilli: " + convertTimeMilli.ToString());
-    return mesh;
+    return tempMesh;
   }
 
   // Scale and translate the decoded mesh so it will be visible to

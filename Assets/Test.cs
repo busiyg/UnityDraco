@@ -15,8 +15,8 @@ public class Test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (index>2) {
-            dracoDecodingObject.updateMesh(dracoDecodingObject.mesh);
+        if (index>1) {
+            dracoDecodingObject.updateMesh();
             index = 0;
         }
 

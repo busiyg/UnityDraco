@@ -36,9 +36,9 @@ public class DracoFileImporter : AssetPostprocessor {
       str.LastIndexOf('/');
       int length = str.Length - ".drc.bytes".Length - str.LastIndexOf('/') - 1;
       string fileName = str.Substring(str.LastIndexOf('/') + 1, length);
-
-      int numFaces = dracoLoader.LoadMeshFromAsset(fileName + ".drc", ref meshes);
-      if (numFaces > 0) {
+            int numFaces = 0;
+            //int numFaces = dracoLoader.LoadMeshFromAsset(fileName + ".drc", ref meshes);
+            if (numFaces > 0) {
         // Create mesh assets. Combine the smaller meshes to a single asset.
         // TODO: Figure out how to combine to an unseen object as .obj files.
         AssetDatabase.CreateAsset (meshes [0], "Assets/Resources/" + fileName + ".asset");

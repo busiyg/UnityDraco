@@ -19,13 +19,12 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class DracoDecodingObject : MonoBehaviour {
-
-    public Mesh mesh;
+    public DracoMeshLoader dracoLoader;
   // This function will be used when the GameObject is initialized.
   void Start() {
-        mesh = new Mesh();
 
-        updateMesh(mesh);
+        dracoLoader = new DracoMeshLoader();
+        updateMesh();
 
         //DracoMeshLoader dracoLoader = new DracoMeshLoader();
         ///*
@@ -42,10 +41,7 @@ public class DracoDecodingObject : MonoBehaviour {
 
   }
 
-    public void  updateMesh(Mesh  mesh) {
-        List<Mesh> m = new List<Mesh>();
-        DracoMeshLoader dracoLoader = new DracoMeshLoader();
-        int numFaces = dracoLoader.LoadMeshFromAsset("test.obj.drc", ref m);
-        GetComponent<MeshFilter>().mesh = m[0];
+    public void  updateMesh() {
+        GetComponent<MeshFilter>().mesh = dracoLoader.LoadMeshFromAsset("test.obj.drc");
     }
 }
