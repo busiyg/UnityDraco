@@ -121,6 +121,12 @@ public unsafe class DracoMeshLoader
   [DllImport ("dracodec_unity")] private static extern bool GetAttributeData(
       DracoMesh* mesh, DracoAttribute* attr, DracoData**data);
 
+    public Mesh TestJob(byte[] b) {
+
+        return ConvertDracoMeshToUnity2(b);
+    }
+
+
   public Mesh LoadMeshFromAsset(string assetName)
   {
     TextAsset asset =
@@ -142,7 +148,7 @@ public unsafe class DracoMeshLoader
   // adds the Unity mesh to meshes. encodedData is the compressed Draco mesh.
   public unsafe Mesh ConvertDracoMeshToUnity(byte[] encodedData)
   {
-    float startTime = Time.realtimeSinceStartup;
+    //float startTime = Time.realtimeSinceStartup;
     DracoMesh *mesh = null;
  
     if (DecodeDracoMesh(encodedData, encodedData.Length, &mesh) <= 0) {
@@ -150,26 +156,55 @@ public unsafe class DracoMeshLoader
       return null;
     }
 
-    float decodeTimeMilli =
-        (Time.realtimeSinceStartup - startTime) * 1000.0f;
-    Debug.Log("decodeTimeMilli: " + decodeTimeMilli.ToString());
+        //float decodeTimeMilli =
+        //    (Time.realtimeSinceStartup - startTime) * 1000.0f;
+        //Debug.Log("decodeTimeMilli: " + decodeTimeMilli.ToString());
 
-    Debug.Log("Num indices: " + mesh->numFaces.ToString());
-    Debug.Log("Num vertices: " + mesh->numVertices.ToString());
-    Debug.Log("Num attributes: " + mesh->numAttributes.ToString());
-        Mesh unityMesh = CreateUnityMesh(mesh);
-    UnityMeshToCamera(ref unityMesh);
-    int numFaces = mesh->numFaces;
-    ReleaseDracoMesh(&mesh);
-    return unityMesh;
+        //Debug.Log("Num indices: " + mesh->numFaces.ToString());
+        //Debug.Log("Num vertices: " + mesh->numVertices.ToString());
+        //Debug.Log("Num attributes: " + mesh->numAttributes.ToString());
+        //Mesh unityMesh = CreateUnityMesh(mesh);
+        //UnityMeshToCamera(ref unityMesh);
+        //int numFaces = mesh->numFaces;
+        //ReleaseDracoMesh(&mesh);
+
+        return null;
+    //return unityMesh;
   }
+
+    public unsafe Mesh ConvertDracoMeshToUnity2(byte[] encodedData)
+    {
+        //float startTime = Time.realtimeSinceStartup;
+        DracoMesh* mesh = null;
+
+        if (DecodeDracoMesh(encodedData, encodedData.Length, &mesh) <= 0)
+        {
+            Debug.Log("Failed: Decoding error.");
+            return null;
+        }
+
+        //float decodeTimeMilli =
+        //    (Time.realtimeSinceStartup - startTime) * 1000.0f;
+        //Debug.Log("decodeTimeMilli: " + decodeTimeMilli.ToString());
+
+        //Debug.Log("Num indices: " + mesh->numFaces.ToString());
+        //Debug.Log("Num vertices: " + mesh->numVertices.ToString());
+        //Debug.Log("Num attributes: " + mesh->numAttributes.ToString());
+        //Mesh unityMesh = CreateUnityMesh(mesh);
+        //UnityMeshToCamera(ref unityMesh);
+        //int numFaces = mesh->numFaces;
+        //ReleaseDracoMesh(&mesh);
+
+       return null;
+       // return unityMesh;
+    }
 
     private Mesh tempMesh;
 
   // Creates a Unity mesh from the decoded Draco mesh.
   public unsafe Mesh CreateUnityMesh(DracoMesh *dracoMesh)
   {
-    float startTime = Time.realtimeSinceStartup;
+    //float startTime = Time.realtimeSinceStartup;
     int numFaces = dracoMesh->numFaces;
     int[] newTriangles = new int[dracoMesh->numFaces * 3];
     Vector3[] newVertices = new Vector3[dracoMesh->numVertices];
@@ -271,12 +306,12 @@ public unsafe class DracoMeshLoader
       }
     }
 
-    float copyDecodedDataTimeMilli =
-        (Time.realtimeSinceStartup - startTime) * 1000.0f;
-    Debug.Log("copyDecodedDataTimeMilli: " +
-              copyDecodedDataTimeMilli.ToString());
+    //float copyDecodedDataTimeMilli =
+    //    (Time.realtimeSinceStartup - startTime) * 1000.0f;
+    //Debug.Log("copyDecodedDataTimeMilli: " +
+    //          copyDecodedDataTimeMilli.ToString());
 
-    startTime = Time.realtimeSinceStartup;
+    //startTime = Time.realtimeSinceStartup;
 
         if (this.tempMesh == null)
         {
@@ -313,9 +348,9 @@ public unsafe class DracoMeshLoader
       tempMesh.colors = newColors;
     }
 
-    float convertTimeMilli =
-        (Time.realtimeSinceStartup - startTime) * 1000.0f;
-    Debug.Log("convertTimeMilli: " + convertTimeMilli.ToString());
+    //float convertTimeMilli =
+    //    (Time.realtimeSinceStartup - startTime) * 1000.0f;
+    //Debug.Log("convertTimeMilli: " + convertTimeMilli.ToString());
     return tempMesh;
   }
 

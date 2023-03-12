@@ -12,14 +12,32 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
+//using Unity.Burst;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using Unity.Jobs;
+using Unity.Collections;
+using Unity.Burst;
+
+[BurstCompile]
+public struct DracoJob : IJob
+{
+    public NativeArray<byte> bytes;
+    public void Execute()
+    {
+       // DracoMeshLoader dracoLoader = new DracoMeshLoader();
+       // dracoLoader.TestJob(bytes.ToArray());
+        Debug.Log("DracoJob Execute");
+    }
+}
 
 public class DracoDecodingObject : MonoBehaviour {
     public DracoMeshLoader dracoLoader;
+    public TextAsset textAsset;
+
   // This function will be used when the GameObject is initialized.
   void Start() {
 
@@ -41,7 +59,29 @@ public class DracoDecodingObject : MonoBehaviour {
 
   }
 
+    public void Update()
+    {
+        //updateMesh();
+
+        int l = textAsset.bytes.Length;
+        NativeArray<byte> b = new NativeArray<byte>(l, Allocator.TempJob);
+        b.CopyFrom(textAsset.bytes);
+        DracoJob dracoJob = new DracoJob
+        {
+            bytes = b
+        };
+
+        JobHandle jobHandle = dracoJob.Schedule();
+        jobHandle.Complete();
+        b.Dispose();
+        //GetComponent<MeshFilter>().mesh = dracoJob.mesh;
+    }
+
     public void  updateMesh() {
-        GetComponent<MeshFilter>().mesh = dracoLoader.LoadMeshFromAsset("test.obj.drc");
+
+        //DracoMeshLoader dracoLoader = new DracoMeshLoader();
+        dracoLoader.TestJob(textAsset.bytes);
+
+        //GetComponent<MeshFilter>().mesh = dracoLoader.LoadMeshFromAsset("test.obj.drc");
     }
 }
